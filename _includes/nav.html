@@ -1,0 +1,22 @@
+<header class="site-header">
+    <div class="container">
+        <nav aria-label="Main navigation">
+            <a href="{{ '/' | relative_url }}" class="logo">TRUE<span>.cover</span></a>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<ul class="nav-links" id="navLinks" role="navigation" aria-label="Site pages">
+    <li><a href="{{ '/cyber-insurance/' | relative_url }}">Cyber</a></li>
+    <li><a href="{{ '/tech-eo-insurance/' | relative_url }}">Tech E&O</a></li>
+    <li><a href="{{ '/do-insurance/' | relative_url }}">D&O</a></li>
+    <li><a href="{{ '/commercial-insurance/' | relative_url }}">Commercial</a></li>
+    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+    <li><a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Get in Touch</a></li>
+</ul>

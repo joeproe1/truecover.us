@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Insights - True Cover"
+description: "Practical guidance on commercial insurance for technology companies. Cyber, Tech E&O, D&O, and coverage questions answered."
+---
+
+<section class="insights-hero">
+    <div class="container">
+        <h1>Insights</h1>
+        <p class="hero-sub">Practical answers to the insurance questions technology companies actually ask.</p>
+    </div>
+</section>
+
+<section class="insights-list">
+    <div class="container">
+        {% if site.posts.size > 0 %}
+            {% for post in site.posts %}
+            <div class="insight-item">
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p class="insight-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>{% endif %}
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>Articles coming soon. In the meantime, if you have a specific coverage question, <a href="/contact/">get in touch</a>.</p>
+        {% endif %}
+    </div>
+</section>

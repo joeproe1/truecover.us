@@ -1,0 +1,111 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo %}
+{% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+
+<!-- Favicon -->
+<link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" sizes="32x32">
+<link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" sizes="192x192">
+<link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+<!-- WebSite Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "True Cover",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description }}",
+  "publisher": { "@id": "{{ site.url }}/#organization" }
+}
+</script>
+
+<!-- Site Identity Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["InsuranceAgency", "ProfessionalService"],
+      "@id": "{{ site.url }}/#organization",
+      "name": "True Cover",
+      "url": "{{ site.url }}",
+      "description": "Commercial insurance brokerage for technology companies. Cyber Liability, Technology Errors and Omissions, Directors and Officers, and full commercial programs for software companies, IT services firms, managed service providers, and FinTechs.",
+      "foundingDate": "2026",
+      "founder": { "@id": "{{ site.url }}/#joerg" },
+      "telephone": "+1-717-490-7670",
+      "email": "{{ site.email }}",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-717-490-7670",
+        "contactType": "sales",
+        "email": "{{ site.email }}"
+      },
+      "areaServed": [
+        { "@type": "State", "name": "Pennsylvania" },
+        { "@type": "State", "name": "Florida" },
+        { "@type": "State", "name": "New Jersey" }
+      ],
+      "serviceType": [
+        "Cyber Liability Insurance",
+        "Technology Errors and Omissions Insurance",
+        "Directors and Officers Insurance",
+        "Commercial Insurance",
+        "Business Owners Policy",
+        "General Liability Insurance",
+        "Workers Compensation Insurance",
+        "Employment Practices Liability Insurance",
+        "Umbrella and Excess Liability Insurance"
+      ],
+      "audience": [
+        { "@type": "Audience", "audienceType": "Software Companies" },
+        { "@type": "Audience", "audienceType": "IT Services Firms" },
+        { "@type": "Audience", "audienceType": "Managed Service Providers" },
+        { "@type": "Audience", "audienceType": "FinTech Companies" },
+        { "@type": "Audience", "audienceType": "SaaS Companies" },
+        { "@type": "Audience", "audienceType": "Digital Agencies" }
+      ],
+      "knowsAbout": [
+        "Cyber Insurance for Technology Companies",
+        "Technology Errors and Omissions Insurance",
+        "Directors and Officers Insurance for Startups",
+        "Commercial Insurance for Software Companies",
+        "MSP Insurance",
+        "FinTech Insurance",
+        "Professional Liability for IT Services",
+        "Ransomware Coverage",
+        "Social Engineering Coverage",
+        "Policy Language Analysis"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#joerg",
+      "name": "Joerg Proeve",
+      "jobTitle": "Principal",
+      "url": "{{ site.url }}/about/",
+      "description": "Insurance broker with 20 years of experience spanning carriers (Chubb, CNA), insurance startups, and specialty risk advisory. Engineering and cybersecurity background. Places commercial insurance for technology companies with a focus on coverage quality, not just price.",
+      "worksFor": { "@id": "{{ site.url }}/#organization" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Karlsruhe Institute of Technology" },
+        { "@type": "CollegeOrUniversity", "name": "London Business School" }
+      ],
+      "knowsAbout": [
+        "Cyber Insurance",
+        "Technology Errors and Omissions",
+        "Directors and Officers Insurance",
+        "Professional Liability",
+        "Cybersecurity",
+        "Policy Language Analysis",
+        "Coverage Gap Analysis"
+      ],
+      "sameAs": [
+        "{{ site.linkedin }}"
+      ]
+    }
+  ]
+}
+</script>

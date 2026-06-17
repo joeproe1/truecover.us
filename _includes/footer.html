@@ -1,0 +1,39 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="{{ '/' | relative_url }}" class="logo">TRUE<span>.cover</span></a>
+                <p>Commercial insurance for technology companies.</p>
+                <p style="margin-top: 4px;">Licensed in PA, FL, and NJ</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Coverage</h4>
+                    <ul>
+                        <li><a href="{{ '/cyber-insurance/' | relative_url }}">Cyber Liability</a></li>
+                        <li><a href="{{ '/tech-eo-insurance/' | relative_url }}">Tech E&O</a></li>
+                        <li><a href="{{ '/do-insurance/' | relative_url }}">D&O</a></li>
+                        <li><a href="{{ '/commercial-insurance/' | relative_url }}">Commercial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="{{ '/insights/' | relative_url }}">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+                        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ site.time | date: '%Y' }} True Cover. Insurance services provided through Breezy Risk Advisors LLC. All rights reserved.</p>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+    </div>
+</footer>

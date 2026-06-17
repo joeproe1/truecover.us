@@ -1,0 +1,61 @@
+# Site settings
+title: True Cover
+description: "Commercial insurance brokerage for technology companies. Cyber Liability, Technology E&O, Directors & Officers, and full commercial programs. Licensed in Pennsylvania, Florida, and New Jersey."
+url: "https://truecover.us"
+baseurl: ""
+author: Joerg Proeve
+
+# Contact info
+email: joerg@truecover.us
+phone: "(717) 490-7670"
+linkedin: "https://www.linkedin.com/in/joergproeve/"
+
+# Build settings
+markdown: kramdown
+permalink: /insights/:title/
+future: true
+
+# Plugins (all GitHub Pages whitelisted)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO tag defaults
+twitter:
+  card: summary
+
+
+# Feed settings
+feed:
+  path: /feed/
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CNAME
+  - .gitignore
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Joerg Proeve"
+
+# Theme (none - custom styles only)
+theme: null
+
+# Sass
+sass:
+  style: compressed
+  sass_dir: _sass
