@@ -1,13 +1,13 @@
 // Buttons
 .btn {
     display: inline-block;
-    padding: 14px 32px;
+    padding: 12px 28px;
     font-family: $font-body;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: var(--radius);
+    transition: all 0.2s ease;
     cursor: pointer;
     border: none;
 }
@@ -19,49 +19,65 @@
     &:hover {
         background: $accent-hover;
         color: $white;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 30px rgba($accent, 0.4);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba($accent, 0.3);
     }
 }
 
 .btn-secondary {
-    background: transparent;
-    color: $primary;
-    border: 2px solid $primary;
+    background: $white;
+    color: $text-primary;
+    border: 1px solid $border;
 
     &:hover {
-        background: $primary;
-        color: $white;
-        transform: translateY(-2px);
+        border-color: $text-secondary;
+        transform: translateY(-1px);
     }
 }
 
 .btn-accent {
     background: $accent;
     color: $white;
-    font-weight: 700;
-    padding: 16px 36px;
-    font-size: 17px;
-    box-shadow: 0 4px 20px rgba($accent, 0.3);
+    padding: 14px 32px;
+    font-size: 16px;
 
     &:hover {
         background: $accent-hover;
         color: $white;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 30px rgba($accent, 0.4);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba($accent, 0.3);
+    }
+}
+
+.btn-white {
+    background: $white;
+    color: $accent;
+    font-weight: 600;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.9);
+        color: $accent-hover;
+        transform: translateY(-1px);
     }
 }
 
 .btn-text {
-    color: $primary;
+    color: $accent;
     font-family: $font-body;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: none;
     padding: 0;
     background: none;
 
     &:hover {
-        color: $accent;
+        color: $accent-hover;
     }
+}
+
+// Button groups
+.btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }

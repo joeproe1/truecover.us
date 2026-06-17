@@ -1,10 +1,11 @@
 <section class="cta-banner">
     <div class="container">
         <div class="cta-banner-inner">
-            <h2>{{ include.title | default: "Ready to Talk About Your Coverage?" }}</h2>
-            <p>{{ include.subtitle | default: "Whether you need a full program review or help with a specific coverage question, I'm happy to talk." }}</p>
-            <a href="{{ '/contact/' | relative_url }}" class="btn btn-accent">{{ include.button | default: "Get in Touch" }} &rarr;</a>
-            {% if include.fine_print %}<p class="cta-fine-print">{{ include.fine_print }}</p>{% endif %}
+            <h2>{{ include.title | default: "Ready to talk about your coverage?" }}</h2>
+            {% if include.subtitle %}<p>{{ include.subtitle }}</p>{% endif %}
+            <div class="btn-group" style="justify-content: center;">
+                <a href="{{ '/contact/' | relative_url }}" class="btn btn-white">{{ include.button | default: "Get a Quote" }}</a>
+            </div>
         </div>
     </div>
 </section>

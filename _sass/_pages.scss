@@ -4,42 +4,82 @@
 
 // Hero
 .hero {
-    padding: 160px 0 80px;
+    padding: 140px 0 60px;
     background: $white;
 
     @media (max-width: $bp-tablet) {
-        padding: 120px 0 60px;
+        padding: 110px 0 48px;
     }
-}
-
-.hero-content {
-    max-width: 800px;
 }
 
 .hero h1 {
-    font-size: 44px;
-    line-height: 1.15;
-    margin-bottom: 20px;
+    font-size: 52px;
+    line-height: 1.1;
+    max-width: 700px;
+    letter-spacing: -0.03em;
 
     @media (max-width: $bp-desktop) {
-        font-size: 36px;
+        font-size: 42px;
     }
 
     @media (max-width: $bp-tablet) {
-        font-size: 30px;
+        font-size: 34px;
     }
 }
 
 .hero-sub {
-    font-size: 20px;
+    font-size: 19px;
     color: $text-secondary;
     line-height: 1.6;
     margin-bottom: 32px;
-    max-width: 640px;
+    max-width: 560px;
 
     @media (max-width: $bp-tablet) {
-        font-size: 18px;
+        font-size: 17px;
     }
+}
+
+// Credibility bar
+.cred-bar {
+    padding: 48px 0;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    background: $white;
+}
+
+.cred-items {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+
+    @media (max-width: $bp-tablet) {
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: $bp-mobile) {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+.cred-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cred-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: $text-primary;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.cred-label {
+    font-size: 14px;
+    color: $text-muted;
 }
 
 // Coverage cards grid
@@ -50,13 +90,16 @@
     @media (max-width: $bp-tablet) {
         padding: $section-padding-mobile 0;
     }
+
+    h2 {
+        margin-bottom: 40px;
+    }
 }
 
 .coverage-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-top: 40px;
+    gap: 20px;
 
     @media (max-width: $bp-tablet) {
         grid-template-columns: 1fr;
@@ -66,36 +109,50 @@
 .coverage-card {
     background: $white;
     border: 1px solid $border;
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    transition: all 0.3s;
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: block;
+    color: inherit;
 
     &:hover {
         border-color: $accent;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-        transform: translateY(-2px);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-icon {
+        color: $accent;
+        margin-bottom: 16px;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
     }
 
     h3 {
-        margin-bottom: 12px;
-        font-size: 22px;
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: $text-primary;
     }
 
     p {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.6;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
+        color: $text-secondary;
     }
 
-    a {
-        color: $accent;
+    .card-link {
+        font-size: 14px;
         font-weight: 600;
-        font-size: 15px;
+        color: $accent;
     }
 }
 
-// Why section
-.why-section {
+// Differentiator section
+.diff-section {
     padding: $section-padding 0;
 
     @media (max-width: $bp-tablet) {
@@ -103,63 +160,63 @@
     }
 }
 
-.why-content {
-    max-width: 800px;
+.diff-content {
+    max-width: 640px;
 
     p {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.7;
     }
 }
 
 // About preview
 .about-preview {
-    padding: $section-padding 0;
+    padding: 64px 0;
     background: $bg-light;
-
-    @media (max-width: $bp-tablet) {
-        padding: $section-padding-mobile 0;
-    }
+    border-top: 1px solid $border;
 }
 
 .about-preview-content {
-    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    @media (max-width: $bp-tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     p {
-        font-size: 18px;
-        line-height: 1.7;
+        font-size: 17px;
+        line-height: 1.6;
+        margin: 0;
+        max-width: 640px;
     }
 }
 
 // CTA Banner
 .cta-banner {
-    padding: 60px 0;
-    background: $primary;
+    padding: 64px 0;
+    background: $accent;
     text-align: center;
 }
 
 .cta-banner-inner {
-    max-width: 600px;
+    max-width: 560px;
     margin: 0 auto;
 
     h2 {
         color: $white;
-        font-family: $font-body;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
+        font-size: 28px;
     }
 
     p {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 18px;
-        margin-bottom: 28px;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 17px;
+        margin-bottom: 24px;
     }
-}
-
-.cta-fine-print {
-    font-size: 14px !important;
-    color: rgba(255, 255, 255, 0.5) !important;
-    margin-top: 16px;
-    margin-bottom: 0 !important;
 }
 
 // ============================================
@@ -167,87 +224,116 @@
 // ============================================
 
 .product-hero {
-    padding: 140px 0 60px;
+    padding: 130px 0 48px;
     background: $white;
 
     @media (max-width: $bp-tablet) {
-        padding: 100px 0 40px;
+        padding: 100px 0 36px;
     }
 }
 
 .product-hero h1 {
     margin-bottom: 16px;
+    font-size: 40px;
+
+    @media (max-width: $bp-tablet) {
+        font-size: 30px;
+    }
 }
 
 .product-hero .hero-sub {
     margin-bottom: 0;
+    max-width: 680px;
 }
 
 .product-content {
-    padding: $section-padding 0;
+    padding: 64px 0 $section-padding;
 
     @media (max-width: $bp-tablet) {
-        padding: $section-padding-mobile 0;
+        padding: 48px 0 $section-padding-mobile;
     }
 }
 
 .product-body {
-    max-width: 800px;
+    max-width: 720px;
 
     h2 {
         margin-top: 48px;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 
     h3 {
-        margin-top: 32px;
-        margin-bottom: 12px;
-        font-size: 20px;
+        margin-top: 28px;
+        margin-bottom: 8px;
+        font-size: 18px;
     }
 
     p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.7;
     }
 
     ul {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
 
         li {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.7;
             color: $text-secondary;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
     }
 }
 
-// FAQ sections on product pages
+// ============================================
+// Common Questions page
+// ============================================
+
 .faq-section {
-    padding: $section-padding 0;
-    background: $bg-light;
+    padding: 64px 0 $section-padding;
 
     @media (max-width: $bp-tablet) {
-        padding: $section-padding-mobile 0;
+        padding: 48px 0 $section-padding-mobile;
     }
 }
 
-.faq-list {
-    max-width: 800px;
+.faq-group {
+    margin-bottom: 48px;
+    max-width: 720px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $border;
+    }
 }
 
 .faq-item {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     h3 {
-        font-size: 20px;
-        margin-bottom: 8px;
-        color: $primary;
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: $text-primary;
     }
 
     p {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.7;
+        margin-bottom: 0;
     }
 }
 
@@ -256,29 +342,29 @@
 // ============================================
 
 .about-hero {
-    padding: 140px 0 40px;
+    padding: 130px 0 36px;
     background: $white;
 
     @media (max-width: $bp-tablet) {
-        padding: 100px 0 30px;
+        padding: 100px 0 24px;
     }
 }
 
 .about-content {
-    padding: 40px 0 $section-padding;
+    padding: 36px 0 $section-padding;
 }
 
 .about-body {
-    max-width: 800px;
+    max-width: 680px;
 
     p {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.7;
     }
 
     h2 {
-        margin-top: 48px;
-        margin-bottom: 16px;
+        margin-top: 40px;
+        margin-bottom: 12px;
     }
 }
 
@@ -287,26 +373,47 @@
 // ============================================
 
 .contact-hero {
-    padding: 140px 0 40px;
+    padding: 130px 0 36px;
     background: $white;
 
     @media (max-width: $bp-tablet) {
-        padding: 100px 0 30px;
+        padding: 100px 0 24px;
     }
 }
 
 .contact-content {
-    padding: 40px 0 $section-padding;
-    max-width: 600px;
+    padding: 36px 0 $section-padding;
+    max-width: 560px;
 
     p {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.7;
     }
 
-    a {
-        color: $accent;
+    h3 {
+        font-size: 16px;
+        color: $text-muted;
         font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 4px;
+        margin-top: 28px;
+
+        &:first-of-type {
+            margin-top: 32px;
+        }
+    }
+
+    a {
+        font-weight: 500;
+    }
+
+    .legal-note {
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px solid $border;
+        color: $text-muted;
+        font-size: 14px;
     }
 }
 
@@ -315,22 +422,22 @@
 // ============================================
 
 .insights-hero {
-    padding: 140px 0 40px;
+    padding: 130px 0 36px;
     background: $white;
 
     @media (max-width: $bp-tablet) {
-        padding: 100px 0 30px;
+        padding: 100px 0 24px;
     }
 }
 
 .insights-list {
-    padding: 40px 0 $section-padding;
-    max-width: 800px;
+    padding: 36px 0 $section-padding;
+    max-width: 720px;
 }
 
 .insight-item {
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
     border-bottom: 1px solid $border;
 
     &:last-child {
@@ -338,10 +445,10 @@
     }
 
     h3 {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
 
         a {
-            color: $primary;
+            color: $text-primary;
 
             &:hover {
                 color: $accent;
@@ -351,12 +458,12 @@
 
     .insight-date {
         font-size: 14px;
-        color: $text-secondary;
+        color: $text-muted;
         margin-bottom: 8px;
     }
 
     p {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
 
@@ -365,11 +472,11 @@
 // ============================================
 
 .page-content {
-    padding: 140px 0 $section-padding;
-    max-width: 800px;
+    padding: 130px 0 $section-padding;
+    max-width: 720px;
     margin: 0 auto;
 
     @media (max-width: $bp-tablet) {
-        padding: 100px 20px $section-padding-mobile;
+        padding: 100px 24px $section-padding-mobile;
     }
 }
