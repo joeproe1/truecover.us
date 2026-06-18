@@ -70,6 +70,83 @@ nav {
     }
 }
 
+// Dropdown
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    font-family: $font-body;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-secondary;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: rotate(45deg);
+        margin-left: 5px;
+        margin-bottom: 2px;
+        transition: transform 0.2s;
+    }
+
+    &:hover {
+        color: $text-primary;
+    }
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: -16px;
+    background: $white;
+    border: 1px solid $border;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    min-width: 200px;
+    z-index: 1010;
+
+    li {
+        margin: 0;
+    }
+
+    a {
+        display: block;
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $text-secondary;
+        white-space: nowrap;
+
+        &:hover {
+            background: $accent-light;
+            color: $accent;
+        }
+    }
+}
+
+.has-dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.has-dropdown.open .dropdown-toggle::after {
+    transform: rotate(-135deg);
+    margin-bottom: -1px;
+}
+
 // Menu toggle (hamburger)
 .menu-toggle {
     display: none;
@@ -136,6 +213,33 @@ nav {
         .btn {
             font-size: 16px;
             padding: 12px 28px;
+        }
+    }
+
+    .has-dropdown {
+        text-align: center;
+    }
+
+    .dropdown-toggle {
+        font-size: 18px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        border: none;
+        box-shadow: none;
+        min-width: 0;
+        padding: 8px 0 0;
+        background: transparent;
+
+        a {
+            font-size: 16px;
+            padding: 6px 0;
+            text-align: center;
+        }
+
+        a:hover {
+            background: transparent;
         }
     }
 }

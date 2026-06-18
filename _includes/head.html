@@ -4,9 +4,14 @@
 {% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
 
 <!-- Favicon -->
-<link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" sizes="32x32">
-<link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" sizes="192x192">
-<link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+<link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/assets/images/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
@@ -33,9 +38,8 @@
       "@id": "{{ site.url }}/#organization",
       "name": "True Cover",
       "url": "{{ site.url }}",
-      "description": "Commercial insurance brokerage for technology companies. Cyber Liability, Technology Errors and Omissions, Directors and Officers, and full commercial programs for software companies, IT services firms, managed service providers, and FinTechs.",
+      "description": "Commercial insurance brokerage. Cyber, professional liability, Directors and Officers, and full commercial programs for small and midsized businesses.",
       "foundingDate": "2026",
-      "founder": { "@id": "{{ site.url }}/#joerg" },
       "telephone": "+1-717-490-7670",
       "email": "{{ site.email }}",
       "contactPoint": {
@@ -61,12 +65,10 @@
         "Umbrella and Excess Liability Insurance"
       ],
       "audience": [
-        { "@type": "Audience", "audienceType": "Software Companies" },
-        { "@type": "Audience", "audienceType": "IT Services Firms" },
-        { "@type": "Audience", "audienceType": "Managed Service Providers" },
-        { "@type": "Audience", "audienceType": "FinTech Companies" },
-        { "@type": "Audience", "audienceType": "SaaS Companies" },
-        { "@type": "Audience", "audienceType": "Digital Agencies" }
+        { "@type": "Audience", "audienceType": "Small Businesses" },
+        { "@type": "Audience", "audienceType": "Midsized Businesses" },
+        { "@type": "Audience", "audienceType": "Professional Services Firms" },
+        { "@type": "Audience", "audienceType": "Technology Companies" }
       ],
       "knowsAbout": [
         "Cyber Insurance for Technology Companies",
@@ -79,31 +81,6 @@
         "Ransomware Coverage",
         "Social Engineering Coverage",
         "Policy Language Analysis"
-      ]
-    },
-    {
-      "@type": "Person",
-      "@id": "{{ site.url }}/#joerg",
-      "name": "Joerg Proeve",
-      "jobTitle": "Principal",
-      "url": "{{ site.url }}/about/",
-      "description": "Insurance broker with 20 years of experience spanning carriers (Chubb, CNA), insurance startups, and specialty risk advisory. Engineering and cybersecurity background. Places commercial insurance for technology companies with a focus on coverage quality, not just price.",
-      "worksFor": { "@id": "{{ site.url }}/#organization" },
-      "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "Karlsruhe Institute of Technology" },
-        { "@type": "CollegeOrUniversity", "name": "London Business School" }
-      ],
-      "knowsAbout": [
-        "Cyber Insurance",
-        "Technology Errors and Omissions",
-        "Directors and Officers Insurance",
-        "Professional Liability",
-        "Cybersecurity",
-        "Policy Language Analysis",
-        "Coverage Gap Analysis"
-      ],
-      "sameAs": [
-        "{{ site.linkedin }}"
       ]
     }
   ]

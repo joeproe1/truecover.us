@@ -1,14 +1,13 @@
 # Site settings
 title: True Cover
-description: "Commercial insurance brokerage for technology companies. Cyber Liability, Technology E&O, Directors & Officers, and full commercial programs. Licensed in Pennsylvania, Florida, and New Jersey."
+description: "Commercial insurance brokerage. Cyber, professional liability, D&O, and full commercial programs for small and midsized businesses. Licensed in Pennsylvania, Florida, and New Jersey."
 url: "https://truecover.us"
 baseurl: ""
-author: Joerg Proeve
+author: True Cover
 
 # Contact info
-email: joerg@truecover.us
+email: joerg@breezyrisk.com
 phone: "(717) 490-7670"
-linkedin: "https://www.linkedin.com/in/joergproeve/"
 
 # Build settings
 markdown: kramdown
@@ -50,7 +49,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Joerg Proeve"
+      author: "True Cover"
 
 # Theme (none - custom styles only)
 theme: null

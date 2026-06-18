@@ -1,9 +1,9 @@
 // Brand Colors - True Cover
-// Clean, modern, distinctly different from Breezy Risk
-$accent: #2563EB;
-$accent-hover: #1D4ED8;
-$accent-light: #EFF6FF;
-$bg-light: #F9FAFB;
+// Indigo accent, tech-forward, confident
+$accent: #4F46E5;
+$accent-hover: #4338CA;
+$accent-light: #EEF2FF;
+$bg-light: #F8FAFC;
 $text-primary: #111827;
 $text-secondary: #4B5563;
 $text-muted: #9CA3AF;
@@ -11,9 +11,9 @@ $border: #E5E7EB;
 $white: #ffffff;
 $dark: #111827;
 
-// Fonts (system font stack - clean, modern, fast)
-$font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$font-heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+// Fonts
+$font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-heading: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
 // Breakpoints
 $bp-desktop: 968px;

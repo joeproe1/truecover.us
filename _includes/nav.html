@@ -13,11 +13,15 @@
 </header>
 
 <ul class="nav-links" id="navLinks" role="navigation" aria-label="Site pages">
-    <li><a href="{{ '/cyber-insurance/' | relative_url }}">Cyber</a></li>
-    <li><a href="{{ '/tech-eo-insurance/' | relative_url }}">Tech E&O</a></li>
-    <li><a href="{{ '/do-insurance/' | relative_url }}">D&O</a></li>
-    <li><a href="{{ '/commercial-insurance/' | relative_url }}">Commercial</a></li>
+    <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Coverage</button>
+        <ul class="dropdown-menu">
+            <li><a href="{{ '/cyber-insurance/' | relative_url }}">Cyber Insurance</a></li>
+            <li><a href="{{ '/tech-eo-insurance/' | relative_url }}">Technology E&O</a></li>
+            <li><a href="{{ '/do-insurance/' | relative_url }}">Directors & Officers</a></li>
+            <li><a href="{{ '/commercial-insurance/' | relative_url }}">Commercial Insurance</a></li>
+        </ul>
+    </li>
     <li><a href="{{ '/insights/' | relative_url }}">Insights</a></li>
-    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
     <li><a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Get a Quote</a></li>
 </ul>
