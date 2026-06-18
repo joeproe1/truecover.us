@@ -75,9 +75,13 @@ a {
     }
 }
 
-img {
+img, svg {
     max-width: 100%;
     height: auto;
+}
+
+svg {
+    display: block;
 }
 
 ul, ol {

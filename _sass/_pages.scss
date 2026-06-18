@@ -183,10 +183,14 @@
     .card-icon {
         color: $accent;
         margin-bottom: 16px;
+        width: 32px;
+        height: 32px;
 
         svg {
             width: 32px;
             height: 32px;
+            max-width: 32px;
+            max-height: 32px;
         }
     }
 
@@ -250,10 +254,14 @@
     .diff-icon {
         color: $accent;
         margin-bottom: 14px;
+        width: 28px;
+        height: 28px;
 
         svg {
             width: 28px;
             height: 28px;
+            max-width: 28px;
+            max-height: 28px;
         }
     }
 
