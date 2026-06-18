@@ -98,6 +98,38 @@
     font-weight: 500;
 }
 
+// Tailored approach
+.tailored-section {
+    padding: $section-padding 0;
+    background: $accent-light;
+
+    @media (max-width: $bp-tablet) {
+        padding: $section-padding-mobile 0;
+    }
+}
+
+.tailored-content {
+    max-width: 640px;
+    text-align: center;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+
+        @media (max-width: $bp-tablet) {
+            font-size: 28px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+}
+
 // Credibility bar
 .cred-bar {
     padding: 48px 0;
