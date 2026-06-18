@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="post-content">
+    <div class="container">
+        <header class="post-header">
+            <h1>{{ page.title }}</h1>
+            <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}{% if page.author %} &middot; {{ page.author }}{% endif %}</p>
+        </header>
+        <div class="post-body">
+            {{ content }}
+        </div>
+    </div>
+</article>
+
+{% include cta-banner.html title="Have questions about your coverage?" subtitle="I'll review your current policies for free and tell you where you stand." button="Get a Free Policy Review" %}
