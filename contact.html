@@ -6,19 +6,63 @@ description: "Get in touch with True Cover for commercial insurance placement. C
 
 <section class="contact-hero">
     <div class="container">
-        <h1>Get in Touch</h1>
+        <h1>Let's get you covered</h1>
     </div>
 </section>
 
 <section class="contact-content">
     <div class="container">
-        <p>Whether you need a quote, a second opinion on your current program, or have a specific coverage question, I'm happy to talk.</p>
+        <div class="contact-layout">
+            <div class="contact-form-wrap">
+                <form action="https://formspree.io/f/mwvjjdqe" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-        <h3>Email</h3>
-        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                    <div class="form-group">
+                        <label for="business">Business name</label>
+                        <input type="text" id="business" name="business" required>
+                    </div>
 
-        <h3>Phone</h3>
-        <p><a href="tel:+17174907670">{{ site.phone }}</a></p>
+                    <div class="form-group">
+                        <label for="need">What do you need?</label>
+                        <select id="need" name="need" required>
+                            <option value="" disabled selected>Select one</option>
+                            <option value="quote">A quote on new coverage</option>
+                            <option value="second-opinion">A second opinion on my current coverage</option>
+                            <option value="certificate">A certificate of insurance</option>
+                            <option value="question">I have a question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="optional">(optional)</span></label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Anything else I should know? <span class="optional">(optional)</span></label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+
+            <div class="contact-direct">
+                <p>Rather just reach out directly?</p>
+                <h3>Email</h3>
+                <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                <h3>Phone</h3>
+                <p><a href="tel:+17174907670">{{ site.phone }}</a></p>
+            </div>
+        </div>
 
         <p class="legal-note">True Cover is a trade name of Breezy Risk Advisors LLC.</p>
     </div>

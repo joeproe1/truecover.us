@@ -109,6 +109,16 @@ nav {
     position: absolute;
     top: calc(100% + 12px);
     left: -16px;
+
+    // Invisible bridge covering the gap so hover doesn't break
+    &::before {
+        content: '';
+        position: absolute;
+        top: -16px;
+        left: 0;
+        right: 0;
+        height: 16px;
+    }
     background: $white;
     border: 1px solid $border;
     border-radius: var(--radius);

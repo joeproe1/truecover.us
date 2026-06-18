@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     dropdowns.forEach(function (dropdown) {
         var toggle = dropdown.querySelector('.dropdown-toggle');
+        var closeTimer = null;
 
         toggle.addEventListener('click', function (e) {
             e.stopPropagation();
@@ -27,9 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
             toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
         });
 
-        // Hover open on desktop
+        // Hover open on desktop with delay on close
         dropdown.addEventListener('mouseenter', function () {
             if (window.innerWidth > 768) {
+                clearTimeout(closeTimer);
                 dropdown.classList.add('open');
                 toggle.setAttribute('aria-expanded', 'true');
             }
@@ -37,8 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         dropdown.addEventListener('mouseleave', function () {
             if (window.innerWidth > 768) {
-                dropdown.classList.remove('open');
-                toggle.setAttribute('aria-expanded', 'false');
+                closeTimer = setTimeout(function () {
+                    dropdown.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }, 200);
             }
         });
     });
