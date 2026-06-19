@@ -68,3 +68,21 @@ description: "Get in touch with True Cover. Insurance for accounting firms, law 
         <p class="legal-note">True Cover is a trade name of Breezy Risk Advisors LLC.</p>
     </div>
 </section>
+
+<script>
+(function() {
+    var params = new URLSearchParams(window.location.search);
+    var need = params.get('need');
+    if (need) {
+        var select = document.getElementById('need');
+        if (select) {
+            for (var i = 0; i < select.options.length; i++) {
+                if (select.options[i].value === need) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+    }
+})();
+</script>

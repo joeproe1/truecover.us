@@ -81,43 +81,42 @@
     @media (max-width: $bp-tablet) {
         padding: $section-padding-mobile 0;
     }
+}
 
-    h2 {
-        margin-bottom: 32px;
-        font-size: 24px;
-        color: $text-muted;
-        font-weight: 500;
+.pain-closer {
+    margin-top: 32px;
+    margin-bottom: 0;
+    font-size: 24px;
+    color: $text-primary;
+    font-weight: 700;
+}
+
+.pain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @media (max-width: $bp-tablet) {
+        grid-template-columns: 1fr;
     }
 }
 
-.pain-list {
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+.pain-card {
+    background: $accent2-light;
+    border-top: 3px solid $accent2;
+    border-radius: var(--radius);
+    padding: 24px;
 
-    .pain-item {
-        padding: 16px 0 16px 20px;
-        border-left: 3px solid $accent;
-        margin-bottom: 0;
+    strong {
+        font-size: 16px;
+        color: $text-primary;
+        line-height: 1.5;
+    }
 
-        & + .pain-item {
-            margin-top: 16px;
-        }
-
-        strong {
-            display: block;
-            font-size: 17px;
-            color: $text-primary;
-            margin-bottom: 4px;
-            line-height: 1.4;
-        }
-
-        span {
-            font-size: 15px;
-            color: $text-secondary;
-            line-height: 1.6;
-        }
+    span {
+        font-size: 16px;
+        color: $text-secondary;
+        line-height: 1.5;
     }
 }
 
@@ -280,13 +279,21 @@
 
     h2 {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 12px;
     }
+}
+
+.industry-intro {
+    text-align: center;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: $text-secondary;
 }
 
 .industry-tiles {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 
     @media (max-width: $bp-desktop) {
@@ -335,6 +342,15 @@
         line-height: 1.6;
         color: $text-secondary;
         margin-bottom: 0;
+    }
+
+    .tile-coverages {
+        font-size: 13px;
+        font-weight: 600;
+        color: $accent2;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid $border;
     }
 }
 
@@ -481,7 +497,7 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 
     @media (max-width: $bp-tablet) {
@@ -647,23 +663,54 @@
     }
 }
 
-.faq-item {
-    margin-bottom: 28px;
+details.faq-item {
+    margin-bottom: 0;
+    border-bottom: 1px solid $border;
 
-    &:last-child {
-        margin-bottom: 0;
+    &:first-of-type {
+        border-top: 1px solid $border;
     }
 
-    h3 {
+    summary {
+        font-family: $font-heading;
         font-size: 18px;
-        margin-bottom: 6px;
+        font-weight: 600;
         color: $text-primary;
+        cursor: pointer;
+        padding: 18px 32px 18px 0;
+        position: relative;
+        list-style: none;
+        line-height: 1.4;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 18px;
+            font-size: 22px;
+            font-weight: 400;
+            color: $text-muted;
+            transition: transform 0.2s;
+        }
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &[open] summary::after {
+        content: '\2212';
     }
 
     p {
         font-size: 16px;
         line-height: 1.7;
         margin-bottom: 0;
+        padding: 0 0 18px;
     }
 }
 
@@ -959,6 +1006,49 @@
 
     strong {
         color: $text-primary;
+    }
+
+    // Requirement tags
+    .post-tag {
+        display: inline-block;
+        font-family: $font-heading;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+
+    .tag-required {
+        background: rgba($accent, 0.1);
+        color: $accent;
+    }
+
+    .tag-situational {
+        background: $accent2-light;
+        color: $accent2;
+    }
+
+    // Callout boxes
+    .post-callout {
+        background: $bg-light;
+        border-left: 4px solid $accent2;
+        padding: 20px 24px;
+        border-radius: 0 var(--radius) var(--radius) 0;
+        margin: 24px 0;
+        font-size: 15px;
+        line-height: 1.7;
+
+        strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
     }
 }
 
