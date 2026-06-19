@@ -982,6 +982,21 @@ details.faq-item {
         margin-top: 40px;
         margin-bottom: 12px;
     }
+
+    .post-callout {
+        background: $bg-light;
+        border-left: 4px solid $accent2;
+        padding: 20px 24px;
+        border-radius: 0 var(--radius) var(--radius) 0;
+        margin: 24px 0;
+        font-size: 15px;
+        line-height: 1.7;
+
+        strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+    }
 }
 
 // Approach section
