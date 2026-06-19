@@ -25,9 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
         toggle.addEventListener('click', function (e) {
             e.stopPropagation();
             if (window.innerWidth <= 768) {
+                if (dropdown.classList.contains('open')) {
+                    // Already open: let the link navigate normally
+                    return;
+                }
                 e.preventDefault();
-                dropdown.classList.toggle('open');
-                toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+                dropdown.classList.add('open');
+                toggle.setAttribute('aria-expanded', 'true');
             }
         });
 
