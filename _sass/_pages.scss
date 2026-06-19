@@ -83,26 +83,41 @@
     }
 
     h2 {
-        margin-bottom: 40px;
+        margin-bottom: 32px;
+        font-size: 24px;
+        color: $text-muted;
+        font-weight: 500;
     }
 }
 
 .pain-list {
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 
-    p {
-        font-size: 18px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        color: $text-secondary;
+    .pain-item {
+        padding: 16px 0 16px 20px;
+        border-left: 3px solid $accent;
+        margin-bottom: 0;
+
+        & + .pain-item {
+            margin-top: 16px;
+        }
 
         strong {
+            display: block;
+            font-size: 17px;
             color: $text-primary;
+            margin-bottom: 4px;
+            line-height: 1.4;
         }
-    }
 
-    p:last-child {
-        margin-bottom: 0;
+        span {
+            font-size: 15px;
+            color: $text-secondary;
+            line-height: 1.6;
+        }
     }
 }
 
@@ -353,8 +368,8 @@
     th {
         font-weight: 600;
         font-size: 16px;
-        color: $text-primary;
-        background: $bg-light;
+        color: $white;
+        background: $dark;
     }
 
     td {
@@ -491,7 +506,7 @@
         font-family: $font-heading;
         font-size: 14px;
         font-weight: 600;
-        color: $accent;
+        color: $accent2;
         margin-bottom: 12px;
         letter-spacing: 0.02em;
     }
@@ -824,6 +839,11 @@
     @media (max-width: $bp-tablet) {
         padding: 100px 0 24px;
     }
+
+    .hero-sub {
+        text-align: left;
+        margin-left: 0;
+    }
 }
 
 .insights-list {
@@ -832,16 +852,25 @@
 }
 
 .insight-item {
-    margin-bottom: 36px;
-    padding-bottom: 36px;
-    border-bottom: 1px solid $border;
+    margin-bottom: 24px;
+    padding: 28px;
+    border: 1px solid $border;
+    border-radius: var(--radius);
+    border-left: 4px solid $accent2;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        border-left-color: $accent;
+    }
 
     &:last-child {
-        border-bottom: none;
+        margin-bottom: 0;
     }
 
     h3 {
         margin-bottom: 6px;
+        font-size: 20px;
 
         a {
             color: $text-primary;
@@ -853,13 +882,83 @@
     }
 
     .insight-date {
-        font-size: 14px;
+        font-size: 13px;
         color: $text-muted;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: $text-secondary;
+        margin-bottom: 0;
+    }
+}
+
+// Post layout
+.post-content {
+    padding: 130px 0 0;
+
+    @media (max-width: $bp-tablet) {
+        padding: 100px 0 0;
+    }
+}
+
+.post-header {
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $border;
+
+    h1 {
+        font-size: 36px;
         margin-bottom: 8px;
+
+        @media (max-width: $bp-tablet) {
+            font-size: 28px;
+        }
+    }
+}
+
+.post-meta {
+    font-size: 14px;
+    color: $text-muted;
+}
+
+.post-body {
+    max-width: 720px;
+    padding-bottom: $section-padding;
+
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        margin-top: 28px;
+        margin-bottom: 8px;
+        font-size: 18px;
     }
 
     p {
         font-size: 16px;
+        line-height: 1.7;
+    }
+
+    ul, ol {
+        margin-bottom: 20px;
+
+        li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: $text-secondary;
+            margin-bottom: 6px;
+        }
+    }
+
+    strong {
+        color: $text-primary;
     }
 }
 

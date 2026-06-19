@@ -25,10 +25,17 @@ nav {
     color: $text-primary;
     text-decoration: none;
     letter-spacing: -0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 
     &:hover {
         color: $text-primary;
     }
+}
+
+.logo-mark {
+    flex-shrink: 0;
 }
 
 // Nav links
