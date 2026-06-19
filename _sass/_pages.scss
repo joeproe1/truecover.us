@@ -772,8 +772,8 @@
     }
 }
 
-// Comparison table (covers / doesn't cover)
-.compare-table {
+// Coverage comparison (covers / doesn't cover)
+.coverage-compare {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
