@@ -10,7 +10,7 @@ I get this question a lot: "I already have professional liability. Do I really n
 
 The short answer is yes. The longer answer is that these two policies look like they overlap, but they cover fundamentally different risks. And the gap between them is exactly where claims get denied.
 
-## What E&O actually covers
+## What E&O covers
 
 Professional liability (E&O) covers claims that arise from your professional work. A client says your advice was wrong, your deliverable was flawed, or you missed a deadline that cost them money. The claim is about your professional judgment or service.
 
@@ -20,7 +20,7 @@ An accounting firm files a tax return incorrectly, and the client owes penalties
 
 E&O responds when the claim is about **what you did professionally**. The trigger is an alleged error, omission, or negligent act in your professional services.
 
-## What cyber insurance actually covers
+## What cyber insurance covers
 
 Cyber insurance covers incidents involving your data, your systems, and the fallout when either is compromised. A hacker gets into your network. An employee clicks a phishing link. A laptop with client files gets stolen. Ransomware locks your systems for a week.
 
