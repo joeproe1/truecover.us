@@ -24,8 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         toggle.addEventListener('click', function (e) {
             e.stopPropagation();
-            dropdown.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+            }
         });
 
         // Hover open on desktop with delay on close

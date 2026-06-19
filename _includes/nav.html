@@ -14,12 +14,11 @@
 
 <ul class="nav-links" id="navLinks" role="navigation" aria-label="Site pages">
     <li class="has-dropdown">
-        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Coverage</button>
+        <a href="{{ '/coverage/' | relative_url }}" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Coverage</a>
         <ul class="dropdown-menu">
+            <li><a href="{{ '/professional-liability/' | relative_url }}">Professional Liability / E&O</a></li>
             <li><a href="{{ '/cyber-insurance/' | relative_url }}">Cyber</a></li>
-            <li><a href="{{ '/tech-eo-insurance/' | relative_url }}">Professional Liability</a></li>
             <li><a href="{{ '/do-insurance/' | relative_url }}">D&O</a></li>
-            <li><a href="{{ '/commercial-insurance/' | relative_url }}">Commercial</a></li>
         </ul>
     </li>
     <li><a href="{{ '/common-questions/' | relative_url }}">Common Questions</a></li>
