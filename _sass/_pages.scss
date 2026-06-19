@@ -706,6 +706,8 @@
         margin-top: 28px;
         margin-bottom: 8px;
         font-size: 18px;
+        padding-left: 16px;
+        border-left: 3px solid $accent2;
     }
 
     p {
@@ -723,6 +725,12 @@
             margin-bottom: 6px;
         }
     }
+}
+
+// Coverage link icons
+.coverage-link-icon {
+    color: $accent;
+    margin-bottom: 8px;
 }
 
 // Coverage link cards
@@ -788,7 +796,9 @@
         font-size: 24px;
         margin-bottom: 24px;
         padding-bottom: 12px;
+        padding-left: 16px;
         border-bottom: 1px solid $border;
+        border-left: 4px solid $accent;
     }
 }
 
@@ -872,6 +882,66 @@ details.faq-item {
         margin-top: 40px;
         margin-bottom: 12px;
     }
+}
+
+// Approach section
+.approach-section {
+    padding: 64px 0;
+    background: $bg-light;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 32px;
+    }
+}
+
+.approach-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+
+    @media (max-width: $bp-tablet) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+.approach-step {
+    padding: 28px 20px;
+    background: $white;
+    border: 1px solid $border;
+    border-radius: var(--radius);
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        border-color: $accent;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .approach-icon {
+        color: $accent;
+        margin-bottom: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: $text-secondary;
+        margin-bottom: 0;
+    }
+}
+
+.approach-closer {
+    max-width: 500px;
+    margin: 32px auto 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: $text-secondary;
 }
 
 // ============================================
