@@ -90,4 +90,4 @@ E&O and cyber insurance serve different purposes. E&O covers mistakes in your pr
 
 If you're not sure whether your current policies have gaps between them, send them to me. I'll read the exclusions, check the definitions, and tell you where you stand.
 
-[Get a free policy review](/contact/?need=policy-review) or call me at (717) 490-7670.
+[Get a free policy review](/contact/?need=policy-review) or email me at hello@truecover.us.
