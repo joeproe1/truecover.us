@@ -100,9 +100,15 @@ body_class: home
 </section>
 
 <!-- CTA -->
-{% include cta-banner.html
-    title="Need a quote or a policy review?"
-    subtitle="I'll give you a straight answer."
-    button="Get a Quote"
-    need="quote"
-%}
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-banner-inner">
+            <h2>Need a quote or a policy review?</h2>
+            <p>I'll give you a straight answer.</p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="/contact/?need=quote" class="btn btn-white">Get a Quote</a>
+                <a href="/policy-review/" class="btn btn-white">Free Policy Review</a>
+            </div>
+        </div>
+    </div>
+</section>
