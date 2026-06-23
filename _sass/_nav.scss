@@ -75,6 +75,14 @@ nav {
         font-size: 14px;
         padding: 8px 20px;
     }
+
+    .btn-primary {
+        color: $white;
+
+        &:hover {
+            color: $white;
+        }
+    }
 }
 
 // Dropdown

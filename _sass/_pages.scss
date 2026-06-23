@@ -395,11 +395,31 @@
     @media (max-width: $bp-tablet) {
         padding: $section-padding-mobile 0;
     }
+}
+
+.compare-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 40px;
 
     h2 {
-        text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 12px;
     }
+
+    p {
+        font-size: 17px;
+        line-height: 1.7;
+        color: $text-secondary;
+    }
+}
+
+.compare-closer {
+    text-align: center;
+    max-width: 500px;
+    margin: 32px auto 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: $text-secondary;
 }
 
 .compare-table {
@@ -1219,6 +1239,87 @@ details.faq-item {
 }
 
 // ============================================
+// Policy Review page
+// ============================================
+
+.review-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+
+    @media (max-width: $bp-tablet) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.review-info {
+    padding-top: 8px;
+
+    .review-lead {
+        font-size: 20px;
+        line-height: 1.6;
+        color: $text-primary;
+        margin-bottom: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        margin-top: 32px;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.review-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+
+    li {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $text-secondary;
+        padding: 6px 0 6px 28px;
+        position: relative;
+
+        &::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: #16A34A;
+            font-weight: 600;
+        }
+    }
+}
+
+.review-steps {
+    padding-left: 20px;
+    margin: 0 0 16px;
+
+    li {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $text-secondary;
+        padding: 4px 0;
+    }
+}
+
+.form-note {
+    margin-top: 16px;
+    font-size: 14px !important;
+    color: $text-muted;
+    text-align: center;
+}
+
+// ============================================
 // Insights index
 // ============================================
 
@@ -1238,7 +1339,6 @@ details.faq-item {
 
 .insights-list {
     padding: 36px 0 $section-padding;
-    max-width: 720px;
 }
 
 .insight-item {
@@ -1372,6 +1472,36 @@ details.faq-item {
     .tag-situational {
         background: $accent2-light;
         color: $accent2;
+    }
+
+    // Compact checklist (label left, text right)
+    .checklist-compact {
+        margin: 24px 0;
+        border-top: 1px solid $border;
+    }
+
+    .checklist-row {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 12px;
+        padding: 14px 0;
+        border-bottom: 1px solid $border;
+        font-size: 15px;
+        line-height: 1.6;
+
+        @media (max-width: $bp-mobile) {
+            grid-template-columns: 1fr;
+            gap: 2px;
+        }
+
+        strong {
+            color: $text-primary;
+            white-space: nowrap;
+        }
+
+        span {
+            color: $text-secondary;
+        }
     }
 
     // Callout boxes

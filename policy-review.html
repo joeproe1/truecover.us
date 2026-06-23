@@ -1,0 +1,87 @@
+---
+layout: default
+title: "Free Policy Review | True Cover"
+description: "Send your current insurance policies and get a plain-language review of what's covered, what's missing, and what to fix. No cost, no obligation."
+permalink: /policy-review/
+---
+
+<section class="contact-hero">
+    <div class="container">
+        <h1>Free Policy Review</h1>
+    </div>
+</section>
+
+<section class="contact-content">
+    <div class="container">
+        <div class="review-layout">
+            <div class="review-info">
+                <p class="review-lead">I'll read your current policies and tell you where you stand.</p>
+
+                <h2>What you get</h2>
+                <ul class="review-checklist">
+                    <li>Line-by-line review of definitions, exclusions, and sublimits</li>
+                    <li>Gaps between your policy and your actual operations</li>
+                    <li>Plain-language summary of what's covered, what isn't, and what to fix</li>
+                </ul>
+                <p>No cost. No obligation. No sales pitch.</p>
+
+                <h2>How it works</h2>
+                <ol class="review-steps">
+                    <li>Fill out the form and email your policies to <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                    <li>I read every page</li>
+                    <li>You get a summary of what I found</li>
+                </ol>
+                <p>Send one policy or your entire program. Most reviews are done within a few business days.</p>
+            </div>
+
+            <div class="contact-form-wrap">
+                <form action="https://formspree.io/f/mwvjjdqe" method="POST" class="contact-form">
+                    <input type="hidden" name="need" value="policy-review">
+
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="business">Business name</label>
+                        <input type="text" id="business" name="business" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coverage-type">What coverage do you want reviewed?</label>
+                        <select id="coverage-type" name="coverage-type" required>
+                            <option value="" disabled selected>Select one</option>
+                            <option value="cyber">Cyber</option>
+                            <option value="eo">E&O / Professional Liability</option>
+                            <option value="do">D&O</option>
+                            <option value="full-program">Full program</option>
+                            <option value="not-sure">Not sure</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Anything else I should know? <span class="optional">(optional)</span></label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+
+                    <p class="form-note">After submitting, email your policy documents to <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include cta-banner.html
+    title="Need a quote on new coverage instead?"
+    subtitle="Tell me about your firm and I'll get you options."
+    button="Get a Quote"
+    need="quote"
+%}

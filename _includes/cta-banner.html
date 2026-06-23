@@ -4,7 +4,7 @@
             <h2>{{ include.title | default: "Ready to talk about your coverage?" }}</h2>
             {% if include.subtitle %}<p>{{ include.subtitle }}</p>{% endif %}
             <div class="btn-group" style="justify-content: center;">
-                <a href="{{ '/contact/' | relative_url }}" class="btn btn-white">{{ include.button | default: "Get a Quote" }}</a>
+                <a href="{{ include.link | default: '/contact/' | relative_url }}{% if include.need %}?need={{ include.need }}{% endif %}" class="btn btn-white">{{ include.button | default: "Get a Quote" }}</a>
             </div>
         </div>
     </div>

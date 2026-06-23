@@ -104,4 +104,4 @@ Before you sign a new client contract, check the insurance requirements section.
 
 If you're not sure whether your current insurance matches what you actually need, I am happy to review your policies for free. No commitment, no sales pitch. I'll read through what you have, flag any coverage gaps, and tell you where you stand. If changes make sense, I can help you get the right coverage in place.
 
-[Get a free policy review](/contact/?need=policy-review) or email me at hello@truecover.us.
+[Get a free policy review](/policy-review/) or email me at hello@truecover.us.
