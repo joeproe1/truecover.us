@@ -970,33 +970,62 @@ details.faq-item {
     padding: 36px 0 $section-padding;
 }
 
-.about-body {
+.about-intro {
     max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 12px;
+    }
 
     p {
         font-size: 17px;
         line-height: 1.7;
+        color: $text-secondary;
+        margin-bottom: 36px;
+    }
+}
+
+.about-gaps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @media (max-width: $bp-tablet) {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+.about-gap-card {
+    background: $bg-light;
+    border-left: 4px solid $accent2;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 24px;
+
+    strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 16px;
+        color: $text-primary;
     }
 
-    h2 {
-        margin-top: 40px;
-        margin-bottom: 12px;
-    }
-
-    .post-callout {
-        background: $bg-light;
-        border-left: 4px solid $accent2;
-        padding: 20px 24px;
-        border-radius: 0 var(--radius) var(--radius) 0;
-        margin: 24px 0;
+    p {
         font-size: 15px;
-        line-height: 1.7;
-
-        strong {
-            display: block;
-            margin-bottom: 4px;
-        }
+        line-height: 1.6;
+        color: $text-secondary;
+        margin-bottom: 0;
     }
+}
+
+.about-closer {
+    max-width: 600px;
+    margin: 32px auto 0;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.7;
+    color: $text-secondary;
 }
 
 // Approach section
