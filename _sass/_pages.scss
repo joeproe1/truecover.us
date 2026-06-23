@@ -781,6 +781,27 @@
     }
 }
 
+a.coverage-link-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    h3 {
+        color: $text-primary;
+        border-left: none;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    &:hover h3 {
+        color: $accent;
+    }
+}
+
 // Coverage comparison (covers / doesn't cover)
 .coverage-compare {
     display: grid;
