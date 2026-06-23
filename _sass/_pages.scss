@@ -433,8 +433,8 @@
     // Highlight the True Cover column
     th:last-child,
     td:last-child {
-        color: $accent;
-        font-weight: 500;
+        color: $accent-hover;
+        font-weight: 600;
     }
 
     @media (max-width: $bp-tablet) {
@@ -613,7 +613,7 @@
     font-size: 14px;
     font-weight: 600;
     text-align: center;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 
     svg {
         color: $accent;
@@ -630,6 +630,7 @@
         border-color: $accent;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
         color: $accent;
+        transform: translateY(-2px);
 
         small {
             color: $text-secondary;
@@ -858,6 +859,8 @@
 }
 
 .biz-coverage-card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid $border;
     border-radius: var(--radius);
     padding: 24px;
@@ -877,6 +880,7 @@
         line-height: 1.7;
         color: $text-secondary;
         margin-bottom: 0;
+        flex-grow: 1;
     }
 }
 
@@ -903,10 +907,10 @@
     h2 {
         font-size: 24px;
         margin-bottom: 24px;
-        padding-bottom: 12px;
-        padding-left: 16px;
-        border-bottom: 1px solid $border;
+        padding: 14px 16px;
+        background: $bg-light;
         border-left: 4px solid $accent;
+        border-radius: 0 var(--radius) var(--radius) 0;
     }
 }
 
