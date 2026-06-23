@@ -9,7 +9,7 @@ body_class: home
 <section class="hero">
     <div class="container">
         <h1>Insurance for law firms, accounting firms, and consultants.</h1>
-        <p class="hero-sub">Most brokers match you with a policy. I make sure the policy matches your practice.</p>
+        <p class="hero-sub">I read every page of your policy and find the gaps before a claim does.</p>
         <div class="btn-group">
             <a href="/contact/?need=quote" class="btn btn-primary">Get a Quote</a>
             <a href="/policy-review/" class="btn btn-secondary">Free Policy Review</a>
@@ -21,9 +21,9 @@ body_class: home
 <div class="social-proof-bar">
     <div class="container">
         <div class="proof-items">
-            <span><strong>50+</strong> carriers</span>
             <span><strong>20 years</strong> in insurance</span>
             <span><strong>Every page</strong> of your policy, read</span>
+            <span><strong>Definitions, exclusions, sublimits</strong> -- checked</span>
         </div>
     </div>
 </div>
@@ -43,30 +43,27 @@ body_class: home
                 <p>A partner left our firm. Did anybody update our D&O policy?</p>
             </div>
         </div>
-        <div class="btn-group" style="justify-content: center; margin-top: 36px;">
-            <a href="/policy-review/" class="btn btn-white">Free Policy Review</a>
-        </div>
     </div>
 </section>
 
 <!-- How I Help -->
 <section class="services-section">
     <div class="container">
-        <h2>How I might help your firm</h2>
+        <h2>How I help</h2>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
                 </div>
-                <h3>You need new insurance</h3>
-                <p>You are starting a new practice and need insurance. I can help you build your insurance program, explain what policies you need and what each one does.</p>
+                <h3>Starting a new practice</h3>
+                <p>I build your insurance program from scratch. Which policies you need, what each one covers, and how they work together. No gaps from day one.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </div>
-                <h3>You have questions about your insurance</h3>
-                <p>You need a second opinion. Send me your current policies and your questions, and I will give you my unbiased advice. No cost, no obligation.</p>
+                <h3>Reviewing what you have</h3>
+                <p>Send me your current policies. I read every page, flag what doesn't match your operations, and tell you what to fix before renewal.</p>
             </div>
         </div>
     </div>
@@ -80,33 +77,29 @@ body_class: home
             <a href="/professional-liability/" class="coverage-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                 <span>Professional Liability / E&O</span>
+                <small>Covers claims from your professional work</small>
             </a>
             <a href="/cyber-insurance/" class="coverage-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 <span>Cyber Insurance</span>
+                <small>Data breaches, ransomware, business interruption</small>
             </a>
             <a href="/do-insurance/" class="coverage-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 <span>D&O Insurance</span>
+                <small>Protects partners and officers personally</small>
             </a>
             <a href="/coverage/" class="coverage-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <span>Business Insurance</span>
+                <small>GL, workers comp, umbrella, and more</small>
             </a>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-banner">
-    <div class="container">
-        <div class="cta-banner-inner">
-            <h2>Need a quote or a policy review?</h2>
-            <p>I'll give you a straight answer.</p>
-            <div class="btn-group" style="justify-content: center;">
-                <a href="/contact/?need=quote" class="btn btn-white">Get a Quote</a>
-                <a href="/policy-review/" class="btn btn-white">Free Policy Review</a>
-            </div>
-        </div>
-    </div>
-</section>
+{% include cta-banner.html
+    title="Ready to talk?"
+    subtitle="I'll give you a straight answer."
+    button="Contact Me"
+%}

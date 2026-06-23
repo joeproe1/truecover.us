@@ -619,10 +619,21 @@
         color: $accent;
     }
 
+    small {
+        font-size: 12px;
+        font-weight: 400;
+        color: $text-muted;
+        line-height: 1.4;
+    }
+
     &:hover {
         border-color: $accent;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
         color: $accent;
+
+        small {
+            color: $text-secondary;
+        }
     }
 }
 
